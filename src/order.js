@@ -5,15 +5,12 @@ function takeOrder(order, deliveryOrders) {
 }
 
 function refundOrder(orderNumber, deliveryOrders) {
-  if (orderNumber === 1657) {
-    deliveryOrders.shift(orderNumber)
-  } else {
-    if (orderNumber === 2893) {
-      deliveryOrders.splice(1, 1)
+  for(var i = 0; i < deliveryOrders.length; i++){
+    if(deliveryOrders[i].orderNumber === orderNumber){
+      deliveryOrders.splice(i,1)
     }
   }
 }
-
 function listItems(deliveryOrders) {
   var foodItems = [];
   for (var i = 0; i < deliveryOrders.length; i++) {

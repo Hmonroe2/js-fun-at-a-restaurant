@@ -1,19 +1,23 @@
 class Chef {
-  constructor(name) {
-    this.name = name
+  constructor(names, restaurant) {
+    this.name = names
+    this.restaurant = restaurant
   }
-  greetCustomer(name, morning){
-    if(morning === true){
+  greetCustomer(name, morning) {
+    if (morning === true) {
       return `Good morning, ${name}!`
     }
     return `Hello, ${name}!`
   }
-  checkForFood(foodItem){
-    if(foodItem.name === `Quiche` ){
-      return `Sorry, we aren't serving Quiche today.`
+  checkForFood(foodItem) {
+    if (this.restaurant.menus.breakfast.includes(foodItem) || this.restaurant.menus.lunch.includes(foodItem) || this.restaurant.menus.dinner.includes(foodItem)) {
+      return `Yes, we're serving ${foodItem.name} today!`
+    } else {
+      return `Sorry, we aren't serving ${foodItem.name} today.`
+
     }
-    return `Yes, we\'re serving ${foodItem.name} today!`
   }
 }
+
 
 module.exports = Chef;
