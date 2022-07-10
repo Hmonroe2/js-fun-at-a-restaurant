@@ -81,7 +81,7 @@ console.log(vegetables[2])
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
-var fruits = [`oraange`,`strawberry`,`apple`, `banana`, `blueberry`,`mango`,`starfruit`]
+var fruits = [`orange`,`strawberry`,`apple`, `banana`, `blueberry`,`mango`,`starfruit`]
 
 // Write the code to access the 5th element of the array, using bracket notation.
 console.log(fruits[4])
